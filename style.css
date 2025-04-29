@@ -1,14 +1,83 @@
-h1,
-h2{
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-icon,
 .footer-icon {
-    width: 25px;
+  width: 25px;
 }
 
 .wrapper,
 .info {
-    display: flex;
+  display: flex;
+}
+
+header::before,
+footer {
+  background-color: blue;
+}
+
+header {
+  position: relative;
+  padding-top: 100px;
+  margin-top: -50px;
+  &::before {
+    content: "";
+    position: absolute;
+    transform: skewY(-7deg);
+    transform-origin: 50% 0;
+    outline: 1px solid transparent;
+    left: 0;
+    top: -100px;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme {
+  background-color: white;
+  width: fit-content;
+  padding: 10px;
+}
+
+.aboutme > p,
+.aboutme > h1 {
+  max-width: 60ch;
+}
+
+section {
+  padding-top: 100px;
+}
+
+.wrapper-section {
+  width: min(100% - 100px, 1400px);
+  margin-inline: auto;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  gap: 50px;
+}
+
+footer {
+  display: flex;
+  margin-top: auto;
+  gap: 25px;
+  justify-content: center;
 }

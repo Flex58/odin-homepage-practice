@@ -1,3 +1,3 @@
 # odin-homepage-practice
 
-Businessman picutre by Andrea Placquadio, found on pexels.com
+Pictures by Andrea Placquadio on pexels.com
