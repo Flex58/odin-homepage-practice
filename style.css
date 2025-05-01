@@ -27,37 +27,45 @@ footer {
 
 header {
   position: relative;
-  padding-top: 100px;
-  margin-top: -50px;
-  &::before {
-    content: "";
-    position: absolute;
-    transform: skewY(-7deg);
-    transform-origin: 50% 0;
-    outline: 1px solid transparent;
-    left: 0;
-    top: -100px;
-    right: 0;
-    bottom: 0;
-    backface-visibility: hidden;
-  }
+}
+
+.diagonal-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background-color: blue;
+  transform: skewY(-11deg);
+  transform-origin: 0;
 }
 
 .content {
   position: relative;
   display: flex;
   justify-content: center;
+  padding: 50px;
 }
 
 .aboutme {
   background-color: white;
   width: fit-content;
-  padding: 10px;
+  height: fit-content;
+  align-self: center;
 }
 
 .aboutme > p,
-.aboutme > h1 {
-  max-width: 60ch;
+.aboutme > h2 {
+  max-width: 65ch;
+  padding: 1em 1em 0 1em;
+}
+
+.aboutme > p {
+  padding-bottom: 4em;
+}
+
+.aboutme > h2 {
+  padding-left: 0.7em;
 }
 
 section {
@@ -80,4 +88,14 @@ footer {
   margin-top: auto;
   gap: 25px;
   justify-content: center;
+  padding: 25px 0;
+}
+
+.card-img {
+  background-color: red;
+  width: 100%;
+  height: 250px;
+  font-size: 2rem;
+  align-content: center;
+  text-align: center;
 }
