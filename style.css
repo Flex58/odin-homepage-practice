@@ -30,8 +30,12 @@ body {
   flex-direction: column;
 }
 
-.card-icon,
 .header-icon,
+.socials-wrapper .footer-icon {
+  width: 40px;
+}
+
+.card-icon,
 .footer-icon {
   width: 25px;
 }
@@ -76,7 +80,7 @@ header img {
   box-shadow: 3px 6px 10px 0px #9b9b9b;
 }
 
-.socials-wrapper {
+.aboutme .socials-wrapper {
   display: flex;
   justify-content: flex-end;
   gap: 0.5em;
@@ -108,7 +112,7 @@ section {
 }
 
 .wrapper-section {
-  width: min(100% - 100px, 1400px);
+  width: min(100% - 8em, 1400px);
   margin-inline: auto;
 }
 
@@ -181,4 +185,35 @@ footer {
 .cardtext {
   padding: 0 0.5em;
   padding-bottom: 0.5em;
+}
+
+.footer .socials-wrapper {
+  display: flex;
+  gap: .5em;
+}
+
+@media (max-width: 1200px) {
+  .content { 
+    display: block;
+  }
+
+  .aboutme {
+    box-shadow: 2px 3px 5px var(--first-color);
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+
+  picture {
+    float: left;
+    padding-right: .5em;
+  }
+
+  picture img {
+    box-shadow: none;
+  }
+
+  .footer {
+    padding: 1em;
+    padding-bottom: 2em;
+  }
 }
