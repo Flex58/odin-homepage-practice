@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "open-sans";
+  src: url("./assets/fonts/open_sans/OpenSans-VariableFont_wdth.woff2") format("woff2")
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +12,10 @@
   --second-color: #5e63b6;
   --third-color: #a393eb;
   --fourth-color: #f5c7f7;
-  font-family: open-sans, Arial, Helvetica, sans-serif;
+  font-family: "open-sans", Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-  font-family: open-sans;
-  src: url(./assets/fonts/open_sans/OpenSans-VariableFont_wdth\wght.woff2)
-    format(woff2);
-}
+
 
 h1 {
   font-size: 2rem;
@@ -192,7 +193,7 @@ footer {
   gap: .5em;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 750px) {
   .content { 
     display: block;
   }
@@ -203,7 +204,7 @@ footer {
     margin-left: 1em;
   }
 
-  picture {
+.about  picture {
     float: left;
     padding-right: .5em;
   }
@@ -216,4 +217,55 @@ footer {
     padding: 1em;
     padding-bottom: 2em;
   }
+}
+
+@media (max-width: 749px) {
+  .content {
+    width: 100vw;
+    padding: 0;
+    display: block;
+  }
+
+  .about {
+    padding: 0;
+    text-align: center;
+  }
+
+  .aboutme {
+    box-shadow: none;
+  }
+
+  .header picture img {
+    box-shadow: none;
+    width: 90vw;
+    height: auto;
+    padding: .5em 0;
+  }
+
+  .diagonal-background {
+    height: 33%;
+  }
+
+  .wrapper-section {
+    width: min(100% - 1.5em, 1000px);
+  }
+
+  .footer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+  }
+
+  .footer-content {
+    text-align: center;
+    align-items: center;
+    padding-bottom: .5em;
+  }
+
+  .footer picture img {
+    padding: 0;
+    width: 100%;
+  }
+  
 }
